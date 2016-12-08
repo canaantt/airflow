@@ -1,0 +1,21 @@
+[2016-11-30 14:22:11,685] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags
+[2016-11-30 14:22:11,796] {base_executor.py:36} INFO - Adding to queue: airflow run oncoscape_test dataStructureSchemaErrorSummary 2016-11-30T00:00:00 --local -sd DAGS_FOLDER/oncoscape_test.py 
+[2016-11-30 14:22:11,802] {sequential_executor.py:26} INFO - Executing command: airflow run oncoscape_test dataStructureSchemaErrorSummary 2016-11-30T00:00:00 --local -sd DAGS_FOLDER/oncoscape_test.py 
+[2016-11-30 14:22:12,660] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags/oncoscape_test.py
+[2016-11-30 14:22:13,647] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags/oncoscape_test.py
+[2016-11-30 14:22:13,768] {models.py:1078} WARNING - Trigger rule `all_success` not satisfied
+[2016-11-30 14:22:13,768] {models.py:1159} WARNING - Dependencies not met yet
+[2016-11-30 14:23:04,851] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags
+[2016-11-30 14:23:04,962] {base_executor.py:36} INFO - Adding to queue: airflow run oncoscape_test dataStructureSchemaErrorSummary 2016-11-30T00:00:00 --local -sd DAGS_FOLDER/oncoscape_test.py 
+[2016-11-30 14:23:04,968] {sequential_executor.py:26} INFO - Executing command: airflow run oncoscape_test dataStructureSchemaErrorSummary 2016-11-30T00:00:00 --local -sd DAGS_FOLDER/oncoscape_test.py 
+[2016-11-30 14:23:05,874] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags/oncoscape_test.py
+[2016-11-30 14:23:06,863] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags/oncoscape_test.py
+[2016-11-30 14:23:06,982] {models.py:1078} WARNING - Trigger rule `all_success` not satisfied
+[2016-11-30 14:23:06,982] {models.py:1159} WARNING - Dependencies not met yet
+[2016-11-30 14:24:59,712] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags
+[2016-11-30 14:24:59,835] {base_executor.py:36} INFO - Adding to queue: airflow run oncoscape_test dataStructureSchemaErrorSummary 2016-11-30T00:00:00 --local -sd DAGS_FOLDER/oncoscape_test.py 
+[2016-11-30 14:24:59,841] {sequential_executor.py:26} INFO - Executing command: airflow run oncoscape_test dataStructureSchemaErrorSummary 2016-11-30T00:00:00 --local -sd DAGS_FOLDER/oncoscape_test.py 
+[2016-11-30 14:25:00,775] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags/oncoscape_test.py
+[2016-11-30 14:25:01,787] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags/oncoscape_test.py
+[2016-11-30 14:25:01,911] {models.py:1078} WARNING - Trigger rule `all_success` not satisfied
+[2016-11-30 14:25:01,911] {models.py:1159} WARNING - Dependencies not met yet

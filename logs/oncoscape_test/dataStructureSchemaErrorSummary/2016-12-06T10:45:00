@@ -1,0 +1,45 @@
+[2016-12-07 10:51:16,350] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags/oncoscape_test.py
+[2016-12-07 10:51:17,485] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags/oncoscape_test.py
+[2016-12-07 10:51:17,626] {models.py:1196} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 2
+--------------------------------------------------------------------------------
+
+[2016-12-07 10:51:17,634] {models.py:1219} INFO - Executing <Task(BashOperator): dataStructureSchemaErrorSummary> on 2016-12-06 10:45:00
+[2016-12-07 10:51:17,651] {bash_operator.py:55} INFO - tmp dir root location: 
+/var/folders/c9/j59fn3952xd748gczkp13kbsj64n5t/T
+[2016-12-07 10:51:17,652] {bash_operator.py:64} INFO - Temporary script location :/var/folders/c9/j59fn3952xd748gczkp13kbsj64n5t/T/airflowtmpWutMQv//var/folders/c9/j59fn3952xd748gczkp13kbsj64n5t/T/airflowtmpWutMQv/dataStructureSchemaErrorSummarypdQhNr
+[2016-12-07 10:51:17,652] {bash_operator.py:65} INFO - Running command: node /Users/zhangj4/Desktop/canaantt_git/oncoscape_api_explorer/test/datasourceTesting/test2.js
+[2016-12-07 10:51:17,657] {bash_operator.py:73} INFO - Output:
+[2016-12-07 10:51:17,806] {bash_operator.py:77} INFO - (node:4985) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: ENOENT: no such file or directory, open 'ajv_test.json'
+[2016-12-07 10:51:17,809] {bash_operator.py:80} INFO - Command exited with return code 0
+[2016-12-07 10:55:51,459] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags/oncoscape_test.py
+[2016-12-07 10:55:52,514] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags/oncoscape_test.py
+[2016-12-07 10:55:52,653] {models.py:1196} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 2
+--------------------------------------------------------------------------------
+
+[2016-12-07 10:55:52,660] {models.py:1219} INFO - Executing <Task(BashOperator): dataStructureSchemaErrorSummary> on 2016-12-06 10:45:00
+[2016-12-07 10:55:52,676] {bash_operator.py:55} INFO - tmp dir root location: 
+/var/folders/c9/j59fn3952xd748gczkp13kbsj64n5t/T
+[2016-12-07 10:55:52,677] {bash_operator.py:64} INFO - Temporary script location :/var/folders/c9/j59fn3952xd748gczkp13kbsj64n5t/T/airflowtmpz1l_0v//var/folders/c9/j59fn3952xd748gczkp13kbsj64n5t/T/airflowtmpz1l_0v/dataStructureSchemaErrorSummarytBX1DX
+[2016-12-07 10:55:52,677] {bash_operator.py:65} INFO - Running command: node /Users/zhangj4/Desktop/canaantt_git/oncoscape_api_explorer/test/datasourceTesting/test2.js
+[2016-12-07 10:55:52,681] {bash_operator.py:73} INFO - Output:
+[2016-12-07 10:55:52,766] {bash_operator.py:77} INFO - (node:5412) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: ENOENT: no such file or directory, open 'ajv_tcga_11212016.json'
+[2016-12-07 10:55:52,769] {bash_operator.py:80} INFO - Command exited with return code 0
+[2016-12-07 10:57:19,677] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags/oncoscape_test.py
+[2016-12-07 10:57:20,804] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags/oncoscape_test.py
+[2016-12-07 10:57:20,954] {models.py:1196} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 2
+--------------------------------------------------------------------------------
+
+[2016-12-07 10:57:20,962] {models.py:1219} INFO - Executing <Task(BashOperator): dataStructureSchemaErrorSummary> on 2016-12-06 10:45:00
+[2016-12-07 10:57:20,979] {bash_operator.py:55} INFO - tmp dir root location: 
+/var/folders/c9/j59fn3952xd748gczkp13kbsj64n5t/T
+[2016-12-07 10:57:20,980] {bash_operator.py:64} INFO - Temporary script location :/var/folders/c9/j59fn3952xd748gczkp13kbsj64n5t/T/airflowtmpcHFzqy//var/folders/c9/j59fn3952xd748gczkp13kbsj64n5t/T/airflowtmpcHFzqy/dataStructureSchemaErrorSummaryBOPWqq
+[2016-12-07 10:57:20,980] {bash_operator.py:65} INFO - Running command: node /Users/zhangj4/Desktop/canaantt_git/oncoscape_api_explorer/test/datasourceTesting/test2.js
+[2016-12-07 10:57:20,985] {bash_operator.py:73} INFO - Output:
+[2016-12-07 10:57:21,074] {bash_operator.py:77} INFO - (node:5636) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: ENOENT: no such file or directory, open 'ajv_tcga_11212016.json'
+[2016-12-07 10:57:21,077] {bash_operator.py:80} INFO - Command exited with return code 0

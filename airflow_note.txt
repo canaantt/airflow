@@ -1,0 +1,49 @@
+Airflow:  Local Executor section where the database is required.
+https://stlong0521.github.io/20161023%20-%20Airflow.html
+
+Postgre:
+http://postgresapp.com/documentation/cli-tools.html
+download and run the server (GUI)
+/Users/zhangj4/Library/Application Support/Postgres/var-9.6
+
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+$ psql -h localhost
+
+sudo pip install psycopg2
+CREATE DATABASE onco_test;
+CREATE ROLE admin CREATEDB;
+GRANT admin to zhangj4; [password is null]
+
+Modify the configuration in AIRFLOW_HOME/airflow.cfg
+# Change the executor to Local Executor
+executor = LocalExecutor
+
+# Change the meta db configuration
+# Note: the postgres username and password do not matter for now, since the database server and clients are still on the same host
+sql_alchemy_conn = postgresql+psycopg2://zhangj4:@localhost/onco_test
+
+
+Phase 3: Extend to Distributed Mode Using Celery Executor
+
+1. Install and configure the message queuing/passing engine on the airflow server: RabbitMQ/Reddis/etc; RabbitMQ 
+
+# Install RabbitMQ
+https://www.rabbitmq.com/install-standalone-mac.html
+downloaded : rabbitmq-server-mac-standalone-3.6.6.tar.xz
+cd to Download
+tar xf rabbitmq-server-mac-standalone-3.6.6.tar.xz 
+
+export PATH=$PATH:/Users/zhangj4/Downloads/rabbitmq_server-3.6.6/sbin 
+export RABBITMQ_HOME="/Users/zhangj4/Downloads/rabbitmq_server-3.6.6." !! must be double quotation marks
+cd rabbitmq_server-3.6.6
+invoke rabbitmq-server
+
+OR 
+
+ sudo rabbitmq-server
+
+
+### find a PID by name:
+ps -A | grep 'rabbit'
+kill -9 ...
+###

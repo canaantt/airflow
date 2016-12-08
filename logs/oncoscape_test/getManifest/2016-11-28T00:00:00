@@ -1,0 +1,22 @@
+[2016-11-30 14:28:57,927] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags
+[2016-11-30 14:28:58,039] {base_executor.py:36} INFO - Adding to queue: airflow run oncoscape_test getManifest 2016-11-28T00:00:00 --local -sd DAGS_FOLDER/oncoscape_test.py 
+[2016-11-30 14:28:58,045] {sequential_executor.py:26} INFO - Executing command: airflow run oncoscape_test getManifest 2016-11-28T00:00:00 --local -sd DAGS_FOLDER/oncoscape_test.py 
+[2016-11-30 14:28:58,908] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags/oncoscape_test.py
+[2016-11-30 14:28:59,913] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags/oncoscape_test.py
+[2016-11-30 14:29:00,034] {models.py:1196} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 2
+--------------------------------------------------------------------------------
+
+[2016-11-30 14:29:00,042] {models.py:1219} INFO - Executing <Task(BashOperator): getManifest> on 2016-11-28 00:00:00
+[2016-11-30 14:29:00,051] {bash_operator.py:55} INFO - tmp dir root location: 
+/var/folders/c9/j59fn3952xd748gczkp13kbsj64n5t/T
+[2016-11-30 14:29:00,052] {bash_operator.py:64} INFO - Temporary script location :/var/folders/c9/j59fn3952xd748gczkp13kbsj64n5t/T/airflowtmpTWnZmB//var/folders/c9/j59fn3952xd748gczkp13kbsj64n5t/T/airflowtmpTWnZmB/getManifestHClD_8
+[2016-11-30 14:29:00,052] {bash_operator.py:65} INFO - Running command: node /Users/zhangj4/Desktop/canaantt_git/TCGAarchive/test/datasourceTesting/generate_manifestArr.js
+[2016-11-30 14:29:00,056] {bash_operator.py:73} INFO - Output:
+[2016-11-30 14:29:02,848] {bash_operator.py:77} INFO - undefined: 2723.848ms
+[2016-11-30 14:29:02,941] {bash_operator.py:77} INFO - null
+[2016-11-30 14:29:02,941] {bash_operator.py:77} INFO - null
+[2016-11-30 14:29:02,942] {bash_operator.py:77} INFO - null
+[2016-11-30 14:29:03,145] {bash_operator.py:77} INFO - null
+[2016-11-30 14:29:03,170] {bash_operator.py:80} INFO - Command exited with return code 0

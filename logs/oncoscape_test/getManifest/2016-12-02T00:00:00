@@ -1,0 +1,38 @@
+[2016-12-06 16:37:34,270] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags/oncoscape_test.py
+[2016-12-06 16:37:35,524] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags/oncoscape_test.py
+[2016-12-06 16:37:35,668] {models.py:1196} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 2
+--------------------------------------------------------------------------------
+
+[2016-12-06 16:37:35,676] {models.py:1219} INFO - Executing <Task(BashOperator): getManifest> on 2016-12-02 00:00:00
+[2016-12-06 16:37:35,694] {bash_operator.py:55} INFO - tmp dir root location: 
+/var/folders/c9/j59fn3952xd748gczkp13kbsj64n5t/T
+[2016-12-06 16:37:35,695] {bash_operator.py:64} INFO - Temporary script location :/var/folders/c9/j59fn3952xd748gczkp13kbsj64n5t/T/airflowtmpte9kgR//var/folders/c9/j59fn3952xd748gczkp13kbsj64n5t/T/airflowtmpte9kgR/getManifestuiawnN
+[2016-12-06 16:37:35,695] {bash_operator.py:65} INFO - Running command: node /Users/zhangj4/Desktop/canaantt_git/TCGAarchive/test/datasourceTesting/generate_manifestArr.js
+[2016-12-06 16:37:35,700] {bash_operator.py:73} INFO - Output:
+[2016-12-06 16:37:39,540] {bash_operator.py:77} INFO - undefined: 3759.600ms
+[2016-12-06 16:37:39,639] {bash_operator.py:77} INFO - null
+[2016-12-06 16:37:39,639] {bash_operator.py:77} INFO - null
+[2016-12-06 16:37:39,639] {bash_operator.py:77} INFO - null
+[2016-12-06 16:37:39,762] {bash_operator.py:77} INFO - null
+[2016-12-06 16:37:39,792] {bash_operator.py:80} INFO - Command exited with return code 0
+[2016-12-07 10:30:04,251] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags/oncoscape_test.py
+[2016-12-07 10:30:06,069] {models.py:154} INFO - Filling up the DagBag from /Users/zhangj4/airflow/dags/oncoscape_test.py
+[2016-12-07 10:30:06,477] {models.py:1196} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 2
+--------------------------------------------------------------------------------
+
+[2016-12-07 10:30:06,506] {models.py:1219} INFO - Executing <Task(BashOperator): getManifest> on 2016-12-02 00:00:00
+[2016-12-07 10:30:06,567] {bash_operator.py:55} INFO - tmp dir root location: 
+/var/folders/c9/j59fn3952xd748gczkp13kbsj64n5t/T
+[2016-12-07 10:30:06,569] {bash_operator.py:64} INFO - Temporary script location :/var/folders/c9/j59fn3952xd748gczkp13kbsj64n5t/T/airflowtmpPWOLWj//var/folders/c9/j59fn3952xd748gczkp13kbsj64n5t/T/airflowtmpPWOLWj/getManifestywVpab
+[2016-12-07 10:30:06,569] {bash_operator.py:65} INFO - Running command: node /Users/zhangj4/Desktop/canaantt_git/oncoscape_api_explorer/test/datasourceTesting/generate_manifestArr.js
+[2016-12-07 10:30:06,599] {bash_operator.py:73} INFO - Output:
+[2016-12-07 10:30:12,865] {bash_operator.py:77} INFO - undefined: 5953.221ms
+[2016-12-07 10:30:13,283] {bash_operator.py:77} INFO - null
+[2016-12-07 10:30:13,284] {bash_operator.py:77} INFO - null
+[2016-12-07 10:30:13,946] {bash_operator.py:77} INFO - null
+[2016-12-07 10:30:13,952] {bash_operator.py:77} INFO - null
+[2016-12-07 10:30:13,991] {bash_operator.py:80} INFO - Command exited with return code 0
