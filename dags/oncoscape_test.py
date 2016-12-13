@@ -12,7 +12,7 @@ from datetime import datetime, timedelta
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
-    'start_date': datetime(2016, 11, 29),
+    'start_date': datetime(2016, 12, 11),
     'email': ['jzhang23@fredhutch.org'],
     'email_on_failure': True,
     'email_on_retry': True,
@@ -30,13 +30,13 @@ dag = DAG('oncoscape_test', default_args=default_args)
 # t1, t2 and t3 are examples of tasks created by instantiating operators
 t1 = BashOperator(
     task_id='getManifest',
-    bash_command='node /Users/zhangj4/Desktop/canaantt_git/oncoscape_api_explorer/test/datasourceTesting/generate_manifestArr.js',
+    bash_command='node generate_manifestArr.js',
     dag=dag)
 
 t2 = BashOperator(
     task_id='dataStructureSchemaValidation',
     #depends_on_past=False,
-    bash_command='node /Users/zhangj4/Desktop/canaantt_git/oncoscape_api_explorer/test/datasourceTesting/test1.js',
+    bash_command='node test1.js',
     dag=dag)
 
 t2.set_upstream(t1)
