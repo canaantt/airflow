@@ -81,6 +81,21 @@ t5 = BashOperator(
     #depends_on_past=False,
     bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/airflow_checkingClinicalFields.js',
     dag=dag)
+t6 = BashOperator(
+    task_id='validateCalculatedFromMolecular',
+    #depends_on_past=False,
+    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/checkingPcaMdsCollectionNaming.js',
+    dag=dag)
+t7 = BashOperator(
+    task_id='checkingMinMaxValues',
+    #depends_on_past=False,
+    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/checkingminMaxValues.js',
+    dag=dag)
+t8 = BashOperator(
+    task_id='renderPatientXRange',
+    #depends_on_past=False,
+    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/renderPatientXRange.js',
+    dag=dag)
 t_final_report = BashOperator(
     task_id='generatingFinalReport',
     #depends_on_past=False,
@@ -95,7 +110,12 @@ t4_1.set_upstream(t2)
 t4_2.set_upstream(t4_1)
 t4_3.set_upstream(t4_2)
 t5.set_upstream(t2)
+t7.set_upstream(t1)
+t8.set_upstream(t1)
 t_final_report.set_upstream(t2)
 t_final_report.set_upstream(t3_3)
 t_final_report.set_upstream(t4_3)
 t_final_report.set_upstream(t5)
+t_final_report.set_upstream(t6)
+t_final_report.set_upstream(t7)
+t_final_report.set_upstream(t8)
