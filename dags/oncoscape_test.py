@@ -34,10 +34,41 @@ t1 = BashOperator(
     bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/dataStr/generate_manifestArr.js',
     dag=dag)
 
-t2 = BashOperator(
-    task_id='dataStructureSchemaValidation',
+t2_1_1 = BashOperator(
+    task_id='dataStructureSchemaValidation_pi1',
     #depends_on_past=False,
-    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/dataStr/test1.js',
+    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/dataStr/test1_pi_1.js',
+    dag=dag)
+
+t2_1_2 = BashOperator(
+    task_id='dataStructureSchemaValidation_pi2',
+    #depends_on_past=False,
+    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/dataStr/test1_pi_2.js',
+    dag=dag)
+t2_1_3 = BashOperator(
+    task_id='dataStructureSchemaValidation_pi3',
+    #depends_on_past=False,
+    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/dataStr/test1_pi_3.js',
+    dag=dag)
+t2_1_4 = BashOperator(
+    task_id='dataStructureSchemaValidation_pi4',
+    #depends_on_past=False,
+    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/dataStr/test1_pi_4.js',
+    dag=dag)
+t2_1_5 = BashOperator(
+    task_id='dataStructureSchemaValidation_pi5',
+    #depends_on_past=False,
+    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/dataStr/test1_pi_5.js',
+    dag=dag)
+t2_1_6 = BashOperator(
+    task_id='dataStructureSchemaValidation_pi6',
+    #depends_on_past=False,
+    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/dataStr/test1_pi_6.js',
+    dag=dag)
+t2_2 = BashOperator(
+    task_id='dataStructureSchemaValidation_summary',
+    #depends_on_past=False,
+    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/dataStr/test2.js',
     dag=dag)
 
 t3_0 = BashOperator(
@@ -101,8 +132,19 @@ t_final_report = BashOperator(
     #depends_on_past=False,
     bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/airflow_generate_report.js',
     dag=dag)
-t2.set_upstream(t1)
-t3_0.set_upstream(t2)
+t2_1_1.set_upstream(t1)
+t2_1_2.set_upstream(t1)
+t2_1_3.set_upstream(t1)
+t2_1_4.set_upstream(t1)
+t2_1_5.set_upstream(t1)
+t2_1_6.set_upstream(t1)
+t2_2.set_upstream(t2_1_1)
+t2_2.set_upstream(t2_1_2)
+t2_2.set_upstream(t2_1_3)
+t2_2.set_upstream(t2_1_4)
+t2_2.set_upstream(t2_1_5)
+t2_2.set_upstream(t2_1_6)
+t3_0.set_upstream(t2_2)
 t3_1.set_upstream(t3_0)
 t3_2.set_upstream(t3_1)
 t3_3.set_upstream(t3_2)
