@@ -60,11 +60,7 @@ t2_1_5 = BashOperator(
     #depends_on_past=False,
     bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/dataStr/test1_pi_5.js',
     dag=dag)
-t2_1_6 = BashOperator(
-    task_id='dataStructureSchemaValidation_pi6',
-    #depends_on_past=False,
-    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/dataStr/test1_pi_6.js',
-    dag=dag)
+
 t2_2 = BashOperator(
     task_id='dataStructureSchemaValidation_summary',
     #depends_on_past=False,
@@ -137,24 +133,22 @@ t2_1_2.set_upstream(t1)
 t2_1_3.set_upstream(t1)
 t2_1_4.set_upstream(t1)
 t2_1_5.set_upstream(t1)
-t2_1_6.set_upstream(t1)
 t2_2.set_upstream(t2_1_1)
 t2_2.set_upstream(t2_1_2)
 t2_2.set_upstream(t2_1_3)
 t2_2.set_upstream(t2_1_4)
 t2_2.set_upstream(t2_1_5)
-t2_2.set_upstream(t2_1_6)
 t3_0.set_upstream(t2_2)
 t3_1.set_upstream(t3_0)
 t3_2.set_upstream(t3_1)
 t3_3.set_upstream(t3_2)
-t4_1.set_upstream(t2)
+t4_1.set_upstream(t2_2)
 t4_2.set_upstream(t4_1)
 t4_3.set_upstream(t4_2)
-t5.set_upstream(t2)
+t5.set_upstream(t2_2)
 t7.set_upstream(t1)
 t8.set_upstream(t1)
-t_final_report.set_upstream(t2)
+t_final_report.set_upstream(t2_2)
 t_final_report.set_upstream(t3_3)
 t_final_report.set_upstream(t4_3)
 t_final_report.set_upstream(t5)
