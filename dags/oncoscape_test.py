@@ -126,7 +126,7 @@ t8 = BashOperator(
 t_final_report = BashOperator(
     task_id='generatingFinalReport',
     #depends_on_past=False,
-    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/airflow_generate_report.js',
+    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/airflow_generate_report.js > ${AIRFLOW_HOME}/docker-airflow/onco-test/report.md',
     dag=dag)
 t2_1_1.set_upstream(t1)
 t2_1_2.set_upstream(t1)
