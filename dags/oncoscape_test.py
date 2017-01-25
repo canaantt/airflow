@@ -113,10 +113,40 @@ t6 = BashOperator(
     #depends_on_past=False,
     bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/checkingPcaMdsCollectionNaming.js',
     dag=dag)
-t7 = BashOperator(
-    task_id='checkingMinMaxValues',
+t7_1_1 = BashOperator(
+    task_id='checkingMinMaxValues1',
     #depends_on_past=False,
-    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/checkingminMaxValues.js',
+    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/checkingminMaxValues_1.js',
+    dag=dag)
+t7_1_2 = BashOperator(
+    task_id='checkingMinMaxValues2',
+    #depends_on_past=False,
+    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/checkingminMaxValues_2.js',
+    dag=dag)
+t7_1_3 = BashOperator(
+    task_id='checkingMinMaxValues3',
+    #depends_on_past=False,
+    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/checkingminMaxValues_3.js',
+    dag=dag)
+t7_1_4 = BashOperator(
+    task_id='checkingMinMaxValues4',
+    #depends_on_past=False,
+    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/checkingminMaxValues_4.js',
+    dag=dag)
+t7_1_5 = BashOperator(
+    task_id='checkingMinMaxValues5',
+    #depends_on_past=False,
+    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/checkingminMaxValues_5.js',
+    dag=dag)
+t7_1_6 = BashOperator(
+    task_id='checkingMinMaxValues6',
+    #depends_on_past=False,
+    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/checkingminMaxValues_6.js',
+    dag=dag)
+t7_2 = BashOperator(
+    task_id='checkingMinMaxValues_sum',
+    #depends_on_past=False,
+    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/checkingminMaxValues_sum.js',
     dag=dag)
 t8 = BashOperator(
     task_id='renderPatientXRange',
@@ -126,7 +156,7 @@ t8 = BashOperator(
 t_final_report = BashOperator(
     task_id='generatingFinalReport',
     #depends_on_past=False,
-    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/airflow_generate_report.js > ${AIRFLOW_HOME}/docker-airflow/onco-test/report.md',
+    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/airflow_generate_report.js > ${AIRFLOW_HOME}/docker-airflow/onco-test/report1.md',
     dag=dag)
 t2_1_1.set_upstream(t1)
 t2_1_2.set_upstream(t1)
@@ -146,12 +176,23 @@ t4_1.set_upstream(t2_2)
 t4_2.set_upstream(t4_1)
 t4_3.set_upstream(t4_2)
 t5.set_upstream(t2_2)
-t7.set_upstream(t1)
+t7_1_1.set_upstream(t1)
+t7_1_2.set_upstream(t1)
+t7_1_3.set_upstream(t1)
+t7_1_4.set_upstream(t1)
+t7_1_5.set_upstream(t1)
+t7_1_6.set_upstream(t1)
+t7_2.set_upstream(t7_1_1)
+t7_2.set_upstream(t7_1_2)
+t7_2.set_upstream(t7_1_3)
+t7_2.set_upstream(t7_1_4)
+t7_2.set_upstream(t7_1_5)
+t7_2.set_upstream(t7_1_6)
 t8.set_upstream(t1)
 t_final_report.set_upstream(t2_2)
 t_final_report.set_upstream(t3_3)
 t_final_report.set_upstream(t4_3)
 t_final_report.set_upstream(t5)
 t_final_report.set_upstream(t6)
-t_final_report.set_upstream(t7)
+t_final_report.set_upstream(t7_2)
 t_final_report.set_upstream(t8)
