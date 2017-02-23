@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
-    'start_date': datetime(2017, 2, 9),
+    'start_date': datetime(2017, 2, 23),
     'email': 'jzhang23@fredhutch.org',
     'email_on_failure': True,
     'email_on_retry': True,
