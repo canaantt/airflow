@@ -39,6 +39,7 @@ t2 = BashOperator(
     #depends_on_past=False,
     bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/prod_testing/airflow_prod_SchemaValidation.js',
     dag=dag)
+<<<<<<< HEAD
 # t3_0 = BashOperator(
 #     task_id='geneSymbolsCollection',
 #     #depends_on_past=False,
@@ -67,3 +68,21 @@ t2.set_upstream(t1)
 # t3_3.set_upstream(t3_2)
 
 
+=======
+
+t3_0 = BashOperator(
+    task_id='ptIDCollection',
+    #depends_on_past=False,
+    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/ptIDs/airflow_prod_ptID.js',
+    dag=dag)
+
+t4_0 = BashOperator(
+    task_id='geneSymbolCollection',
+    #depends_on_past=False,
+    bash_command='node ${AIRFLOW_HOME}/docker-airflow/onco-test/geneSymbols/airflow_prod_geneSymbols.js',
+    dag=dag)
+
+t2.set_upstream(t1)
+t3_0.set_upstream(t1)
+t4_0.set_upstream(t1)
+>>>>>>> a31d228b395fcf9bb10ed2d339565bcab255ac11
